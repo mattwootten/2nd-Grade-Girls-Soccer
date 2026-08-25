@@ -390,6 +390,59 @@
             overflow-wrap: anywhere;
         }
 
+        /* Snack Section inside Cards */
+        .snack-section {
+            margin-top: auto;
+            padding-top: 12px;
+            border-top: 1px dashed var(--border-color);
+        }
+
+        .snack-form-group {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+
+        .snack-input {
+            flex: 1 1 160px;
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-family: inherit;
+        }
+
+        .snack-input:focus {
+            border-color: var(--accent-gold);
+            outline: none;
+        }
+
+        .snack-status-bar {
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .snack-status-text {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .snack-sync-notice {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-maroon);
+        }
+
         .card-footer {
             border-top: 1px solid var(--border-color);
             padding: 12px 16px;
@@ -417,59 +470,6 @@
             width: 15px;
             height: 15px;
             fill: currentColor;
-        }
-
-        /* Practice & Snack Sign-up Section */
-        .snack-box {
-            background: var(--white);
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-            padding: 20px;
-            margin-bottom: 25px;
-        }
-
-        .snack-header {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.6rem;
-            color: var(--primary-maroon);
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
-
-        .snack-subtitle {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 15px;
-        }
-
-        .snack-form-group {
-            display: flex;
-            gap: 8px;
-            margin-top: 10px;
-            flex-wrap: wrap;
-        }
-
-        .snack-input {
-            flex: 1 1 180px;
-            padding: 8px 12px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-family: inherit;
-        }
-
-        .snack-input:focus {
-            border-color: var(--accent-gold);
-            outline: none;
-        }
-
-        .snack-status {
-            display: inline-block;
-            margin-top: 8px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--primary-maroon);
         }
 
         /* Footer */
@@ -553,7 +553,7 @@
     <!-- Tab Navigation -->
     <div class="tab-nav">
         <button class="tab-btn active" onclick="switchTab('games', this)">Game Schedule</button>
-        <button class="tab-btn" onclick="switchTab('practices', this)">Practice &amp; Snack Sign-Up</button>
+        <button class="tab-btn" onclick="switchTab('practices', this)">Practice Schedule</button>
     </div>
 
     <div class="container">
@@ -581,269 +581,20 @@
             </div>
 
             <!-- Schedule Cards Grid -->
-            <div class="schedule-grid" id="scheduleGrid">
-
-                <!-- Game 1 -->
-                <div class="game-card">
-                    <div class="card-header">
-                        <span class="date-badge">Sun, Aug 30, 2026</span>
-                        <span class="time-badge">2:00 PM CDT</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="event-title">St. Francis of Assisi School (A)</div>
-                        <div class="info-row">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                            <div>
-                                <span class="info-label">Field:</span>
-                                <span class="info-value">Wehner - Odenwald, Field #1</span>
-                            </div>
-                        </div>
-                        <div class="info-row">
-                            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-                            <div>
-                                <span class="info-label">Address:</span>
-                                <span class="info-value">7600 Hazel Ave, St. Louis, MO 63119</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://maps.google.com/?q=7600+Hazel+Ave,+St.+Louis,+MO+63119" target="_blank" class="map-btn">
-                            Get Directions
-                            <svg viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H5v12h12v-6h2v6c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Game 2 -->
-                <div class="game-card">
-                    <div class="card-header">
-                        <span class="date-badge">Sat, Sep 12, 2026</span>
-                        <span class="time-badge">1:00 PM CDT</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="event-title">Mary Queen of Peace School (A)</div>
-                        <div class="info-row">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                            <div>
-                                <span class="info-label">Field:</span>
-                                <span class="info-value">Bussen Park, Field 1B</span>
-                            </div>
-                        </div>
-                        <div class="info-row">
-                            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-                            <div>
-                                <span class="info-label">Address:</span>
-                                <span class="info-value">400 Magoffin Rd, St. Louis, MO 63129</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://maps.google.com/?q=400+Magoffin+Rd,+St.+Louis,+MO+63129" target="_blank" class="map-btn">
-                            Get Directions
-                            <svg viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H5v12h12v-6h2v6c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Game 3 -->
-                <div class="game-card">
-                    <div class="card-header">
-                        <span class="date-badge">Sat, Sep 19, 2026</span>
-                        <span class="time-badge">2:00 PM CDT</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="event-title">St. Gabriel School (A)</div>
-                        <div class="info-row">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                            <div>
-                                <span class="info-label">Location:</span>
-                                <span class="info-value">St. Justin the Martyr School</span>
-                            </div>
-                        </div>
-                        <div class="info-row">
-                            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-                            <div>
-                                <span class="info-label">Address:</span>
-                                <span class="info-value">11910 Eddie & Park Rd, St. Louis, MO 63126</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://maps.google.com/?q=11910+Eddie+%26+Park+Rd,+St.+Louis,+MO+63126" target="_blank" class="map-btn">
-                            Get Directions
-                            <svg viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H5v12h12v-6h2v6c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Game 4 -->
-                <div class="game-card">
-                    <div class="card-header">
-                        <span class="date-badge">Sun, Sep 20, 2026</span>
-                        <span class="time-badge">1:00 PM CDT</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="event-title">St. Margaret Mary Alacoque School (A)</div>
-                        <div class="info-row">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                            <div>
-                                <span class="info-label">Location:</span>
-                                <span class="info-value">St. Margaret Mary Alacoque School</span>
-                            </div>
-                        </div>
-                        <div class="info-row">
-                            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-                            <div>
-                                <span class="info-label">Address:</span>
-                                <span class="info-value">4900 Ringer Rd, St. Louis, MO 63129</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://maps.google.com/?q=4900+Ringer+Rd,+St.+Louis,+MO+63129" target="_blank" class="map-btn">
-                            Get Directions
-                            <svg viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H5v12h12v-6h2v6c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Game 5 -->
-                <div class="game-card">
-                    <div class="card-header">
-                        <span class="date-badge">Sun, Sep 27, 2026</span>
-                        <span class="time-badge">1:00 PM CDT</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="event-title">Christ the King Catholic School (A)</div>
-                        <div class="info-row">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                            <div>
-                                <span class="info-label">Location:</span>
-                                <span class="info-value">Visitation Academy of St Louis</span>
-                            </div>
-                        </div>
-                        <div class="info-row">
-                            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-                            <div>
-                                <span class="info-label">Address:</span>
-                                <span class="info-value">3020 N Ballas Rd, St. Louis, MO 63131</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://maps.google.com/?q=3020+N+Ballas+Rd,+St.+Louis,+MO+63131" target="_blank" class="map-btn">
-                            Get Directions
-                            <svg viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H5v12h12v-6h2v6c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Game 6 -->
-                <div class="game-card">
-                    <div class="card-header">
-                        <span class="date-badge">Sun, Oct 4, 2026</span>
-                        <span class="time-badge">1:00 PM CDT</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="event-title">Our Lady of the Pillar School (A)</div>
-                        <div class="info-row">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                            <div>
-                                <span class="info-label">Location:</span>
-                                <span class="info-value">Odenwald</span>
-                            </div>
-                        </div>
-                        <div class="info-row">
-                            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-                            <div>
-                                <span class="info-label">Address:</span>
-                                <span class="info-value">7600 Hazel Ave, St. Louis, MO 63119</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://maps.google.com/?q=7600+Hazel+Ave,+St.+Louis,+MO+63119" target="_blank" class="map-btn">
-                            Get Directions
-                            <svg viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H5v12h12v-6h2v6c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Game 7 -->
-                <div class="game-card">
-                    <div class="card-header">
-                        <span class="date-badge">Sat, Oct 17, 2026</span>
-                        <span class="time-badge">3:00 PM CDT</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="event-title">Mary Queen of Peace School (A)</div>
-                        <div class="info-row">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                            <div>
-                                <span class="info-label">Field:</span>
-                                <span class="info-value">Kirkwood Park, Upper Field A</span>
-                            </div>
-                        </div>
-                        <div class="info-row">
-                            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-                            <div>
-                                <span class="info-label">Address:</span>
-                                <span class="info-value">574 W Adams Ave, Kirkwood, MO 63122</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://maps.google.com/?q=574+W+Adams+Ave,+Kirkwood,+MO+63122" target="_blank" class="map-btn">
-                            Get Directions
-                            <svg viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H5v12h12v-6h2v6c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Game 8 -->
-                <div class="game-card">
-                    <div class="card-header">
-                        <span class="date-badge">Sun, Oct 25, 2026</span>
-                        <span class="time-badge">1:00 PM CDT</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="event-title">St. Gabriel School (A)</div>
-                        <div class="info-row">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                            <div>
-                                <span class="info-label">Location:</span>
-                                <span class="info-value">Holy Redeemer Catholic School</span>
-                            </div>
-                        </div>
-                        <div class="info-row">
-                            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-                            <div>
-                                <span class="info-label">Address:</span>
-                                <span class="info-value">17 Joy Ave, Webster Groves, MO 63119</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://maps.google.com/?q=17+Joy+Ave,+Webster+Groves,+MO+63119" target="_blank" class="map-btn">
-                            Get Directions
-                            <svg viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H5v12h12v-6h2v6c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
+            <div class="schedule-grid" id="gameGrid">
+                <!-- Rendered by JavaScript -->
             </div>
         </div>
 
-        <!-- TAB 2: PRACTICES & SNACK SIGN-UP -->
+        <!-- TAB 2: PRACTICES -->
         <div id="practices" class="tab-content">
-            <div class="snack-box">
-                <div class="snack-header">Weekly Practice Schedule &amp; Snack Sign-Up</div>
-                <div class="snack-subtitle">Practices take place every Tuesday from 3:00 - 4:15 PM CDT. Enter your name below to sign up for bringing snacks for a specific practice.</div>
-                <div id="snackSyncNotice" class="snack-status"></div>
+            <div class="snack-status-bar">
+                <span class="snack-status-text">Practices are held every Tuesday from 3:00 - 4:15 PM CDT. Sign up to bring team snacks below.</span>
+                <span id="snackSyncNotice" class="snack-sync-notice"></span>
             </div>
 
             <div class="schedule-grid" id="practiceGrid">
-                <!-- Practice items rendered via JavaScript -->
+                <!-- Rendered by JavaScript -->
             </div>
         </div>
 
@@ -855,20 +606,32 @@
     </footer>
 
     <script>
-        // Practice Dates Array
-        const practiceDates = [
-            { id: "p1", date: "Tuesday, Aug. 25, 2026", time: "3:00 - 4:15 PM CDT" },
-            { id: "p2", date: "Tuesday, Sep. 1, 2026", time: "3:00 - 4:15 PM CDT" },
-            { id: "p3", date: "Tuesday, Sep. 8, 2026", time: "3:00 - 4:15 PM CDT" },
-            { id: "p4", date: "Tuesday, Sep. 15, 2026", time: "3:00 - 4:15 PM CDT" },
-            { id: "p5", date: "Tuesday, Sep. 22, 2026", time: "3:00 - 4:15 PM CDT" },
-            { id: "p6", date: "Tuesday, Sep. 29, 2026", time: "3:00 - 4:15 PM CDT" },
-            { id: "p7", date: "Tuesday, Oct. 6, 2026", time: "3:00 - 4:15 PM CDT" },
-            { id: "p8", date: "Tuesday, Oct. 13, 2026", time: "3:00 - 4:15 PM CDT" },
-            { id: "p9", date: "Tuesday, Oct. 20, 2026", time: "3:00 - 4:15 PM CDT" }
+        // Games Dataset
+        const gameData = [
+            { id: "g1", title: "St. Francis of Assisi School (A)", date: "Sun, Aug 30, 2026", time: "2:00 PM CDT", label: "Field", loc: "Wehner - Odenwald, Field #1", addr: "7600 Hazel Ave, St. Louis, MO 63119", map: "https://maps.google.com/?q=7600+Hazel+Ave,+St.+Louis,+MO+63119" },
+            { id: "g2", title: "Mary Queen of Peace School (A)", date: "Sat, Sep 12, 2026", time: "1:00 PM CDT", label: "Field", loc: "Bussen Park, Field 1B", addr: "400 Magoffin Rd, St. Louis, MO 63129", map: "https://maps.google.com/?q=400+Magoffin+Rd,+St.+Louis,+MO+63129" },
+            { id: "g3", title: "St. Gabriel School (A)", date: "Sat, Sep 19, 2026", time: "2:00 PM CDT", label: "Location", loc: "St. Justin the Martyr School", addr: "11910 Eddie & Park Rd, St. Louis, MO 63126", map: "https://maps.google.com/?q=11910+Eddie+%26+Park+Rd,+St.+Louis,+MO+63126" },
+            { id: "g4", title: "St. Margaret Mary Alacoque School (A)", date: "Sun, Sep 20, 2026", time: "1:00 PM CDT", label: "Location", loc: "St. Margaret Mary Alacoque School", addr: "4900 Ringer Rd, St. Louis, MO 63129", map: "https://maps.google.com/?q=4900+Ringer+Rd,+St.+Louis,+MO+63129" },
+            { id: "g5", title: "Christ the King Catholic School (A)", date: "Sun, Sep 27, 2026", time: "1:00 PM CDT", label: "Location", loc: "Visitation Academy of St Louis", addr: "3020 N Ballas Rd, St. Louis, MO 63131", map: "https://maps.google.com/?q=3020+N+Ballas+Rd,+St.+Louis,+MO+63131" },
+            { id: "g6", title: "Our Lady of the Pillar School (A)", date: "Sun, Oct 4, 2026", time: "1:00 PM CDT", label: "Location", loc: "Odenwald", addr: "7600 Hazel Ave, St. Louis, MO 63119", map: "https://maps.google.com/?q=7600+Hazel+Ave,+St.+Louis,+MO+63119" },
+            { id: "g7", title: "Mary Queen of Peace School (A)", date: "Sat, Oct 17, 2026", time: "3:00 PM CDT", label: "Field", loc: "Kirkwood Park, Upper Field A", addr: "574 W Adams Ave, Kirkwood, MO 63122", map: "https://maps.google.com/?q=574+W+Adams+Ave,+Kirkwood,+MO+63122" },
+            { id: "g8", title: "St. Gabriel School (A)", date: "Sun, Oct 25, 2026", time: "1:00 PM CDT", label: "Location", loc: "Holy Redeemer Catholic School", addr: "17 Joy Ave, Webster Groves, MO 63119", map: "https://maps.google.com/?q=17+Joy+Ave,+Webster+Groves,+MO+63119" }
         ];
 
-        // Public Storage via Keyvalue Bin API for shared multi-device persistence
+        // Practice Dates Dataset
+        const practiceData = [
+            { id: "p1", date: "Tuesday, Aug 25, 2026", time: "3:00 - 4:15 PM CDT" },
+            { id: "p2", date: "Tuesday, Sep 1, 2026", time: "3:00 - 4:15 PM CDT" },
+            { id: "p3", date: "Tuesday, Sep 8, 2026", time: "3:00 - 4:15 PM CDT" },
+            { id: "p4", date: "Tuesday, Sep 15, 2026", time: "3:00 - 4:15 PM CDT" },
+            { id: "p5", date: "Tuesday, Sep 22, 2026", time: "3:00 - 4:15 PM CDT" },
+            { id: "p6", date: "Tuesday, Sep 29, 2026", time: "3:00 - 4:15 PM CDT" },
+            { id: "p7", date: "Tuesday, Oct 6, 2026", time: "3:00 - 4:15 PM CDT" },
+            { id: "p8", date: "Tuesday, Oct 13, 2026", time: "3:00 - 4:15 PM CDT" },
+            { id: "p9", date: "Tuesday, Oct 20, 2026", time: "3:00 - 4:15 PM CDT" }
+        ];
+
+        // Public Storage Bin ID for shared multi-device sign-ups
         const BIN_ID = "villa_soccer_snacks_2026";
         let snackData = {};
 
@@ -881,7 +644,7 @@
 
         function searchSchedule() {
             const input = document.getElementById('searchInput').value.toLowerCase();
-            const cards = document.querySelectorAll('#scheduleGrid .game-card');
+            const cards = document.querySelectorAll('#gameGrid .game-card');
 
             cards.forEach(card => {
                 const text = card.innerText.toLowerCase();
@@ -893,15 +656,12 @@
             });
         }
 
-        // Render Practice Cards & Load Snack Data
         async function loadSnackData() {
-            // First check local storage cache
             const local = localStorage.getItem(BIN_ID);
             if (local) {
                 snackData = JSON.parse(local);
             }
 
-            // Fetch from shared cloud storage
             try {
                 const res = await fetch(`https://api.keyvalue.xyz/3b33a598/${BIN_ID}`);
                 if (res.ok) {
@@ -915,14 +675,70 @@
                 console.log("Using local storage fallback.");
             }
 
+            renderGames();
             renderPractices();
+        }
+
+        function renderGames() {
+            const grid = document.getElementById('gameGrid');
+            grid.innerHTML = '';
+
+            gameData.forEach(item => {
+                const signedUp = snackData[item.id] || "";
+                const card = document.createElement('div');
+                card.className = 'game-card';
+                card.innerHTML = `
+                    <div class="card-header">
+                        <span class="date-badge">${item.date}</span>
+                        <span class="time-badge">${item.time}</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="event-title">${item.title}</div>
+                        <div class="info-row">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            <div>
+                                <span class="info-label">${item.label}:</span>
+                                <span class="info-value">${item.loc}</span>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                            <div>
+                                <span class="info-label">Address:</span>
+                                <span class="info-value">${item.addr}</span>
+                            </div>
+                        </div>
+
+                        <div class="snack-section">
+                            <div class="info-row">
+                                <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h2v5l-1-.75L9 9V4zm9 16H6V4h1v9l3-2.25L13 13V4h5v16z"/></svg>
+                                <div>
+                                    <span class="info-label">Snacks:</span>
+                                    <span class="info-value">${signedUp ? `<strong>${signedUp}</strong>` : '<em>Not yet claimed</em>'}</span>
+                                </div>
+                            </div>
+                            <div class="snack-form-group">
+                                <input type="text" class="snack-input" id="input-${item.id}" placeholder="Enter name..." value="${signedUp}">
+                                <button class="btn btn-gold" onclick="saveSnack('${item.id}')">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="${item.map}" target="_blank" class="map-btn">
+                            Get Directions
+                            <svg viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H5v12h12v-6h2v6c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2z"/></svg>
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
         }
 
         function renderPractices() {
             const grid = document.getElementById('practiceGrid');
             grid.innerHTML = '';
 
-            practiceDates.forEach(item => {
+            practiceData.forEach(item => {
                 const signedUp = snackData[item.id] || "";
                 const card = document.createElement('div');
                 card.className = 'game-card';
@@ -934,15 +750,25 @@
                     <div class="card-body">
                         <div class="event-title">Team Practice</div>
                         <div class="info-row">
-                            <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h2v5l-1-.75L9 9V4zm9 16H6V4h1v9l3-2.25L13 13V4h5v16z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
                             <div>
-                                <span class="info-label">Snack Volunteer:</span>
-                                <span class="info-value" id="val-${item.id}">${signedUp ? `<strong>${signedUp}</strong>` : '<em>Not yet claimed</em>'}</span>
+                                <span class="info-label">Event:</span>
+                                <span class="info-value">Weekly Soccer Practice</span>
                             </div>
                         </div>
-                        <div class="snack-form-group">
-                            <input type="text" class="snack-input" id="input-${item.id}" placeholder="Enter your name..." value="${signedUp}">
-                            <button class="btn btn-gold" onclick="saveSnack('${item.id}')">Save</button>
+
+                        <div class="snack-section">
+                            <div class="info-row">
+                                <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h2v5l-1-.75L9 9V4zm9 16H6V4h1v9l3-2.25L13 13V4h5v16z"/></svg>
+                                <div>
+                                    <span class="info-label">Snacks:</span>
+                                    <span class="info-value">${signedUp ? `<strong>${signedUp}</strong>` : '<em>Not yet claimed</em>'}</span>
+                                </div>
+                            </div>
+                            <div class="snack-form-group">
+                                <input type="text" class="snack-input" id="input-${item.id}" placeholder="Enter name..." value="${signedUp}">
+                                <button class="btn btn-gold" onclick="saveSnack('${item.id}')">Save</button>
+                            </div>
                         </div>
                     </div>
                 `;
@@ -951,28 +777,29 @@
         }
 
         async function saveSnack(id) {
-            const val = document.getElementById(`input-${id}`).value.trim();
+            const inputElem = document.getElementById(`input-${id}`);
+            if (!inputElem) return;
+            const val = inputElem.value.trim();
             snackData[id] = val;
             
-            // Save locally
             localStorage.setItem(BIN_ID, JSON.stringify(snackData));
+            renderGames();
             renderPractices();
 
             const status = document.getElementById('snackSyncNotice');
-            status.innerText = "Saving sign-up to team schedule...";
+            if (status) status.innerText = "Saving sign-up to team schedule...";
 
-            // Save to shared cloud storage
             try {
                 await fetch(`https://api.keyvalue.xyz/3b33a598/${BIN_ID}`, {
                     method: 'POST',
                     body: JSON.stringify(snackData)
                 });
-                status.innerText = "✓ Sign-up saved for everyone!";
+                if (status) status.innerText = "✓ Sign-up saved for everyone!";
             } catch (e) {
-                status.innerText = "✓ Saved locally!";
+                if (status) status.innerText = "✓ Saved locally!";
             }
 
-            setTimeout(() => { status.innerText = ""; }, 3000);
+            setTimeout(() => { if (status) status.innerText = ""; }, 3000);
         }
 
         function downloadICS() {
@@ -1047,7 +874,6 @@ END:VCALENDAR`;
             document.body.removeChild(link);
         }
 
-        // Initialize on load
         window.onload = loadSnackData;
     </script>
 </body>
