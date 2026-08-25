@@ -110,8 +110,8 @@
 
         /* Header / Hero Section */
         header {
-            background: linear-gradient(135deg, rgba(74, 18, 31, 0.82) 0%, rgba(107, 29, 47, 0.78) 100%),
-                        url('hero-banner.jpeg') center/cover no-repeat;
+            background: linear-gradient(135deg, rgba(74, 18, 31, 0.85) 0%, rgba(107, 29, 47, 0.8) 100%),
+                        url('https://raw.githubusercontent.com/mattwootten/2nd-Grade-Girls-Soccer/036c388602c06d3bbb288b831137f7dd536430d3/hero-banner.jpg') center 35%/cover no-repeat;
             color: var(--white);
             text-align: center;
             padding: clamp(25px, 5vw, 45px) 15px;
@@ -304,6 +304,7 @@
             box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.2);
         }
 
+        /* Desktop Controls Adjustment */
         @media (min-width: 640px) {
             .controls {
                 flex-direction: row;
@@ -421,6 +422,7 @@
             overflow-wrap: anywhere;
         }
 
+        /* Snack Section inside Cards */
         .snack-section {
             margin-top: auto;
             padding-top: 10px;
@@ -501,6 +503,7 @@
             fill: currentColor;
         }
 
+        /* Footer */
         footer {
             text-align: center;
             padding: 25px 15px;
