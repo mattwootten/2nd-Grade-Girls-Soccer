@@ -1,10 +1,9 @@
-Contact coach Matt Wootten for questions: 636-284-0190 / matt.wootten@gmail.com
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2nd Grade Girls Soccer Schedule | Villa Duchesne Theme</title>
-    <!-- Google Fonts for refined typography -->
+    <!-- Google Fonts for typography inspired by Villa Duchesne -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -36,10 +35,58 @@ Contact coach Matt Wootten for questions: 636-284-0190 / matt.wootten@gmail.com
             line-height: 1.6;
         }
 
-        /* Header / Hero Section */
+        /* Top Bar: Coach Contact Info */
+        .coach-bar {
+            background-color: var(--dark-maroon);
+            color: var(--light-gold);
+            padding: 10px 20px;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+        }
+
+        .coach-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .coach-title {
+            font-weight: 700;
+            color: var(--accent-gold);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .coach-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--light-gold);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .coach-item:hover {
+            color: var(--accent-gold);
+            text-decoration: underline;
+        }
+
+        .coach-item svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--accent-gold);
+            flex-shrink: 0;
+        }
+
+        /* Header / Hero Section with Athletic Photography */
         header {
-            background-color: var(--primary-maroon);
-            background-image: linear-gradient(135deg, var(--dark-maroon) 0%, var(--primary-maroon) 100%);
+            background: linear-gradient(135deg, rgba(74, 18, 31, 0.88) 0%, rgba(107, 29, 47, 0.82) 100%),
+                        url('https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
             color: var(--white);
             text-align: center;
             padding: 60px 20px;
@@ -53,9 +100,9 @@ Contact coach Matt Wootten for questions: 636-284-0190 / matt.wootten@gmail.com
         }
 
         .crest-icon {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 15px;
+            width: 50px;
+            height: 50px;
+            margin-bottom: 12px;
             fill: var(--accent-gold);
         }
 
@@ -64,7 +111,7 @@ Contact coach Matt Wootten for questions: 636-284-0190 / matt.wootten@gmail.com
             font-size: 2.8rem;
             font-weight: 700;
             letter-spacing: 1px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             text-transform: uppercase;
         }
 
@@ -79,42 +126,50 @@ Contact coach Matt Wootten for questions: 636-284-0190 / matt.wootten@gmail.com
         /* Main Container */
         .container {
             max-width: 1100px;
-            margin: 40px auto;
+            margin: 30px auto;
             padding: 0 20px;
         }
 
-        /* Filter Controls */
+        /* Action & Filter Controls Bar */
         .controls {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             background: var(--white);
-            padding: 20px;
+            padding: 18px 20px;
             border-radius: 8px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border-color);
         }
 
-        .filter-buttons {
+        .calendar-export {
             display: flex;
             gap: 10px;
+            flex-wrap: wrap;
+            width: auto;
         }
 
         .btn {
             background: transparent;
             border: 2px solid var(--primary-maroon);
             color: var(--primary-maroon);
-            padding: 8px 18px;
+            padding: 9px 16px;
             border-radius: 4px;
             font-weight: 600;
             font-size: 0.85rem;
             cursor: pointer;
             transition: var(--transition);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            white-space: nowrap;
         }
 
         .btn:hover, .btn.active {
@@ -122,10 +177,28 @@ Contact coach Matt Wootten for questions: 636-284-0190 / matt.wootten@gmail.com
             color: var(--white);
         }
 
+        .btn-gold {
+            background: var(--accent-gold);
+            border-color: var(--accent-gold);
+            color: var(--dark-maroon);
+        }
+
+        .btn-gold:hover {
+            background: #b08c45;
+            border-color: #b08c45;
+            color: var(--white);
+        }
+
+        .btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
         .search-box {
             position: relative;
             flex-grow: 1;
-            max-width: 300px;
+            max-width: 280px;
         }
 
         .search-box input {
@@ -144,7 +217,15 @@ Contact coach Matt Wootten for questions: 636-284-0190 / matt.wootten@gmail.com
             box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
         }
 
-        /* Schedule Cards Layout */
+        /* Filter Pills Bar */
+        .filter-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        /* Schedule Grid Layout */
         .schedule-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -160,7 +241,6 @@ Contact coach Matt Wootten for questions: 636-284-0190 / matt.wootten@gmail.com
             transition: var(--transition);
             display: flex;
             flex-direction: column;
-            position: relative;
         }
 
         .game-card:hover {
@@ -186,7 +266,7 @@ Contact coach Matt Wootten for questions: 636-284-0190 / matt.wootten@gmail.com
         .time-badge {
             background: var(--accent-gold);
             color: var(--dark-maroon);
-            padding: 3px 8px;
+            padding: 4px 10px;
             border-radius: 3px;
             font-size: 0.75rem;
             font-weight: 700;
@@ -194,16 +274,15 @@ Contact coach Matt Wootten for questions: 636-284-0190 / matt.wootten@gmail.com
         }
 
         .card-body {
-            padding: 25px 20px;
+            padding: 22px 20px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
         }
 
         .event-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4rem;
+            font-size: 1.45rem;
             font-weight: 700;
             color: var(--primary-maroon);
             margin-bottom: 15px;
@@ -234,11 +313,12 @@ Contact coach Matt Wootten for questions: 636-284-0190 / matt.wootten@gmail.com
 
         .info-value {
             color: var(--text-muted);
+            word-break: break-word;
         }
 
         .card-footer {
             border-top: 1px solid var(--border-color);
-            padding: 15px 20px;
+            padding: 14px 20px;
             background-color: #FAFAFA;
             display: flex;
             justify-content: flex-end;
@@ -280,48 +360,118 @@ Contact coach Matt Wootten for questions: 636-284-0190 / matt.wootten@gmail.com
             margin-bottom: 8px;
         }
 
-        /* Responsive */
-        @media (max-width: 600px) {
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            header {
+                padding: 45px 15px;
+            }
+
             header h1 {
                 font-size: 2rem;
             }
+
+            header p {
+                font-size: 0.95rem;
+            }
+
+            .coach-container {
+                flex-direction: column;
+                gap: 6px;
+            }
+
             .controls {
                 flex-direction: column;
                 align-items: stretch;
+                padding: 15px;
             }
+
+            .calendar-export {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .calendar-export .btn {
+                width: 100%;
+            }
+
             .search-box {
                 max-width: 100%;
+                width: 100%;
+            }
+
+            .filter-bar {
+                width: 100%;
+            }
+
+            .filter-bar .btn {
+                flex: 1;
+                text-align: center;
+            }
+
+            .schedule-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
 
+    <!-- Top Coach Contact Bar -->
+    <div class="coach-bar">
+        <div class="coach-container">
+            <span class="coach-title">Head Coach: Matt Wootten</span>
+            <a href="tel:6362840190" class="coach-item">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                636-284-0190
+            </a>
+            <a href="mailto:matt.wootten@gmail.com" class="coach-item">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                matt.wootten@gmail.com
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Header -->
     <header>
         <div class="header-content">
-            <!-- Fleur-de-lis / Emblem style SVG -->
             <svg class="crest-icon" viewBox="0 0 24 24">
                 <path d="M12,2C10.5,4 8,7.5 8,11C8,13 9,14.5 10.5,15.5C9,15.5 6,15 4,12C3,15 4,18 7,19C9,19.7 11,19 11.5,18.5C11.2,20 10.5,21.5 9,22H15C13.5,21.5 12.8,20 12.5,18.5C13,19 15,19.7 17,19C20,18 21,15 20,12C18,15 15,15.5 13.5,15.5C15,14.5 16,13 16,11C16,7.5 13.5,4 12,2Z"/>
             </svg>
             <h1>2nd Grade Girls Soccer Schedule</h1>
-            <p>Fall 2026 Season</p>
+            <p>Fall 2026 Athletics Season</p>
         </div>
     </header>
 
     <div class="container">
+
         <!-- Controls Section -->
         <div class="controls">
-            <div class="filter-buttons">
-                <button class="btn active" onclick="filterGames('all', this)">All Games</button>
-                <button class="btn" onclick="filterGames('Sun', this)">Sunday</button>
-                <button class="btn" onclick="filterGames('Sat', this)">Saturday</button>
+            <!-- Calendar Export Options -->
+            <div class="calendar-export">
+                <button class="btn btn-gold" onclick="downloadICS()">
+                    <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
+                    Download iCal (.ics)
+                </button>
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=2nd+Grade+Girls+Soccer+Season&details=Soccer+Schedule+for+2nd+Grade+Girls" target="_blank" class="btn">
+                    <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+                    Google Calendar
+                </a>
             </div>
+
+            <!-- Search Field -->
             <div class="search-box">
-                <input type="text" id="searchInput" onkeyup="searchSchedule()" placeholder="Search location or opponent...">
+                <input type="text" id="searchInput" onkeyup="searchSchedule()" placeholder="Search location or team...">
             </div>
         </div>
 
-        <!-- Schedule Grid -->
+        <!-- Day Filter Buttons -->
+        <div class="filter-bar">
+            <button class="btn active" onclick="filterGames('all', this)">All Games</button>
+            <button class="btn" onclick="filterGames('Sun', this)">Sunday</button>
+            <button class="btn" onclick="filterGames('Sat', this)">Saturday</button>
+        </div>
+
+        <!-- Schedule Cards Grid -->
         <div class="schedule-grid" id="scheduleGrid">
 
             <!-- Game 1 -->
@@ -582,11 +732,9 @@ Contact coach Matt Wootten for questions: 636-284-0190 / matt.wootten@gmail.com
 
     <script>
         function filterGames(day, btn) {
-            // Update active button
-            document.querySelectorAll('.filter-buttons .btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.filter-bar .btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            // Filter elements
             const cards = document.querySelectorAll('.game-card');
             cards.forEach(card => {
                 if (day === 'all' || card.getAttribute('data-day') === day) {
@@ -609,6 +757,78 @@ Contact coach Matt Wootten for questions: 636-284-0190 / matt.wootten@gmail.com
                     card.style.display = 'none';
                 }
             });
+        }
+
+        function downloadICS() {
+            const icsData = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Villa Duchesne//2nd Grade Soccer Schedule//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+SUMMARY:Soccer: ST FRANCIS OF ASSISI SCHOOL (A)
+DTSTART:20260830T190000Z
+DTEND:20260830T200000Z
+LOCATION:7600 Hazel Ave, St. Louis, MO 63119
+DESCRIPTION:Field: Wehner - Odenwald, Field #1\\nCoach: Matt Wootten (636-284-0190)
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Soccer: MARY QUEEN OF PEACE SCHOOL (A)
+DTSTART:20260912T180000Z
+DTEND:20260912T190000Z
+LOCATION:400 Magoffin Rd, St. Louis, MO 63129
+DESCRIPTION:Field: Bussen Park, Field 1B\\nCoach: Matt Wootten (636-284-0190)
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Soccer: ST GABRIEL SCHOOL (A)
+DTSTART:20260919T190000Z
+DTEND:20260919T200000Z
+LOCATION:11910 Eddie & Park Rd, St. Louis, MO 63126
+DESCRIPTION:Location: ST JUSTIN THE MARTYR SCHOOL\\nCoach: Matt Wootten (636-284-0190)
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Soccer: ST MARGARET MARY ALACOQUE SCHOOL (A)
+DTSTART:20260920T180000Z
+DTEND:20260920T190000Z
+LOCATION:4900 Ringer Rd, St. Louis, MO 63129
+DESCRIPTION:Location: ST MARGARET MARY ALACOQUE SCHOOL\\nCoach: Matt Wootten (636-284-0190)
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Soccer: CHRIST THE KING CATHOLIC SCHOOL (A)
+DTSTART:20260927T180000Z
+DTEND:20260927T190000Z
+LOCATION:3020 N Ballas Rd, St. Louis, MO 63131
+DESCRIPTION:Location: Visitation Academy of St Louis\\nCoach: Matt Wootten (636-284-0190)
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Soccer: OUR LADY OF THE PILLAR SCHOOL (A)
+DTSTART:20261004T180000Z
+DTEND:20261004T190000Z
+LOCATION:7600 Hazel Ave, St. Louis, MO 63119
+DESCRIPTION:Location: Odenwald\\nCoach: Matt Wootten (636-284-0190)
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Soccer: MARY QUEEN OF PEACE SCHOOL (A)
+DTSTART:20261017T200000Z
+DTEND:20261017T210000Z
+LOCATION:574 W Adams Ave, Kirkwood, MO 63122
+DESCRIPTION:Field: Kirkwood Park, Upper Field A\\nCoach: Matt Wootten (636-284-0190)
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Soccer: ST GABRIEL SCHOOL (A)
+DTSTART:20261025T180000Z
+DTEND:20261025T190000Z
+LOCATION:17 Joy Ave, Webster Groves, MO 63119
+DESCRIPTION:Location: HOLY REDEEMER CATHOLIC SCHOOL\\nCoach: Matt Wootten (636-284-0190)
+END:VEVENT
+END:VCALENDAR`;
+
+            const blob = new Blob([icsData], { type: 'text/calendar;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.setAttribute('download', '2nd_Grade_Soccer_Schedule.ics');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
     </script>
 </body>
