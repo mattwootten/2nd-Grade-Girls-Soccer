@@ -130,7 +130,7 @@
             padding: 0 20px;
         }
 
-        /* Action & Filter Controls Bar */
+        /* Action & Search Bar */
         .controls {
             display: flex;
             justify-content: space-between;
@@ -198,7 +198,7 @@
         .search-box {
             position: relative;
             flex-grow: 1;
-            max-width: 280px;
+            max-width: 320px;
         }
 
         .search-box input {
@@ -215,14 +215,6 @@
         .search-box input:focus {
             border-color: var(--accent-gold);
             box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
-        }
-
-        /* Filter Pills Bar */
-        .filter-bar {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
         }
 
         /* Schedule Grid Layout */
@@ -399,15 +391,6 @@
                 width: 100%;
             }
 
-            .filter-bar {
-                width: 100%;
-            }
-
-            .filter-bar .btn {
-                flex: 1;
-                text-align: center;
-            }
-
             .schedule-grid {
                 grid-template-columns: 1fr;
             }
@@ -464,18 +447,11 @@
             </div>
         </div>
 
-        <!-- Day Filter Buttons -->
-        <div class="filter-bar">
-            <button class="btn active" onclick="filterGames('all', this)">All Games</button>
-            <button class="btn" onclick="filterGames('Sun', this)">Sunday</button>
-            <button class="btn" onclick="filterGames('Sat', this)">Saturday</button>
-        </div>
-
         <!-- Schedule Cards Grid -->
         <div class="schedule-grid" id="scheduleGrid">
 
             <!-- Game 1 -->
-            <div class="game-card" data-day="Sun">
+            <div class="game-card">
                 <div class="card-header">
                     <span class="date-badge">Sun, Aug 30, 2026</span>
                     <span class="time-badge">2:00 PM CDT</span>
@@ -506,7 +482,7 @@
             </div>
 
             <!-- Game 2 -->
-            <div class="game-card" data-day="Sat">
+            <div class="game-card">
                 <div class="card-header">
                     <span class="date-badge">Sat, Sep 12, 2026</span>
                     <span class="time-badge">1:00 PM CDT</span>
@@ -537,7 +513,7 @@
             </div>
 
             <!-- Game 3 -->
-            <div class="game-card" data-day="Sat">
+            <div class="game-card">
                 <div class="card-header">
                     <span class="date-badge">Sat, Sep 19, 2026</span>
                     <span class="time-badge">2:00 PM CDT</span>
@@ -568,7 +544,7 @@
             </div>
 
             <!-- Game 4 -->
-            <div class="game-card" data-day="Sun">
+            <div class="game-card">
                 <div class="card-header">
                     <span class="date-badge">Sun, Sep 20, 2026</span>
                     <span class="time-badge">1:00 PM CDT</span>
@@ -599,7 +575,7 @@
             </div>
 
             <!-- Game 5 -->
-            <div class="game-card" data-day="Sun">
+            <div class="game-card">
                 <div class="card-header">
                     <span class="date-badge">Sun, Sep 27, 2026</span>
                     <span class="time-badge">1:00 PM CDT</span>
@@ -630,7 +606,7 @@
             </div>
 
             <!-- Game 6 -->
-            <div class="game-card" data-day="Sun">
+            <div class="game-card">
                 <div class="card-header">
                     <span class="date-badge">Sun, Oct 4, 2026</span>
                     <span class="time-badge">1:00 PM CDT</span>
@@ -661,7 +637,7 @@
             </div>
 
             <!-- Game 7 -->
-            <div class="game-card" data-day="Sat">
+            <div class="game-card">
                 <div class="card-header">
                     <span class="date-badge">Sat, Oct 17, 2026</span>
                     <span class="time-badge">3:00 PM CDT</span>
@@ -692,7 +668,7 @@
             </div>
 
             <!-- Game 8 -->
-            <div class="game-card" data-day="Sun">
+            <div class="game-card">
                 <div class="card-header">
                     <span class="date-badge">Sun, Oct 25, 2026</span>
                     <span class="time-badge">1:00 PM CDT</span>
@@ -731,20 +707,6 @@
     </footer>
 
     <script>
-        function filterGames(day, btn) {
-            document.querySelectorAll('.filter-bar .btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const cards = document.querySelectorAll('.game-card');
-            cards.forEach(card => {
-                if (day === 'all' || card.getAttribute('data-day') === day) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
         function searchSchedule() {
             const input = document.getElementById('searchInput').value.toLowerCase();
             const cards = document.querySelectorAll('.game-card');
