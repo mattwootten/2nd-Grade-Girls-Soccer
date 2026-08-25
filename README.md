@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2nd Grade Girls Soccer Schedule & Practices | Villa Duchesne Theme</title>
+    <title>2nd Grade Villa Girls Soccer Schedule & Practices | Villa Duchesne Theme</title>
     <!-- Google Fonts for typography inspired by Villa Duchesne -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +41,7 @@
         .coach-bar {
             background-color: var(--dark-maroon);
             color: var(--light-gold);
-            padding: 12px 15px;
+            padding: 10px 15px;
             font-size: clamp(0.75rem, 2.5vw, 0.85rem);
             border-bottom: 1px solid rgba(197, 160, 89, 0.3);
             width: 100%;
@@ -108,13 +108,13 @@
             flex-shrink: 0;
         }
 
-        /* Header / Hero Section */
+        /* Header / Hero Section Updated with Local Image Reference */
         header {
-            background: linear-gradient(135deg, rgba(74, 18, 31, 0.88) 0%, rgba(107, 29, 47, 0.82) 100%),
-                        url('https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            background: linear-gradient(135deg, rgba(74, 18, 31, 0.85) 0%, rgba(107, 29, 47, 0.78) 100%),
+                        url('hero-banner.jpg') center 40%/cover no-repeat;
             color: var(--white);
             text-align: center;
-            padding: clamp(35px, 8vw, 65px) 15px;
+            padding: clamp(35px, 6vw, 60px) 15px;
             position: relative;
             border-bottom: 5px solid var(--accent-gold);
             width: 100%;
@@ -126,24 +126,36 @@
         }
 
         .crest-icon {
-            width: clamp(40px, 6vw, 55px);
-            height: clamp(40px, 6vw, 55px);
-            margin-bottom: 10px;
+            width: clamp(35px, 5vw, 45px);
+            height: clamp(35px, 5vw, 45px);
+            margin-bottom: 8px;
             fill: var(--accent-gold);
         }
 
         header h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(1.6rem, 5vw, 2.8rem);
+            font-size: clamp(1.5rem, 4.5vw, 2.4rem);
             font-weight: 700;
             letter-spacing: 0.5px;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             text-transform: uppercase;
             line-height: 1.2;
+            font-variant-numeric: lining-nums;
+        }
+
+        header h1 .num-two {
+            font-size: 1.2em;
+            display: inline-block;
+            vertical-align: baseline;
+        }
+
+        header h1 sup {
+            font-size: 0.6em;
+            top: -0.4em;
         }
 
         header p {
-            font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+            font-size: clamp(0.8rem, 2vw, 1rem);
             color: var(--light-gold);
             letter-spacing: 1.5px;
             text-transform: uppercase;
@@ -160,18 +172,21 @@
         }
 
         .tab-btn {
-            padding: 15px 30px;
+            padding: 12px 20px;
             background: transparent;
             color: var(--light-gold);
             border: none;
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(0.85rem, 2.5vw, 1rem);
+            font-size: clamp(0.75rem, 2.2vw, 0.9rem);
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             cursor: pointer;
             transition: var(--transition);
-            border-bottom: 4px solid transparent;
+            border-bottom: 3px solid transparent;
+            flex: 1;
+            max-width: 250px;
+            text-align: center;
         }
 
         .tab-btn:hover {
@@ -188,8 +203,8 @@
         /* Main Container */
         .container {
             max-width: 1100px;
-            margin: clamp(20px, 4vw, 35px) auto;
-            padding: 0 15px;
+            margin: 15px auto 30px;
+            padding: 0 12px;
             width: 100%;
         }
 
@@ -201,16 +216,14 @@
             display: block;
         }
 
-        /* Action & Search Controls Bar */
+        /* Compact Controls Bar */
         .controls {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 25px;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 18px;
             background: var(--white);
-            padding: 15px 18px;
+            padding: 12px;
             border-radius: 8px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border-color);
@@ -219,30 +232,30 @@
 
         .calendar-export {
             display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            flex: 1 1 300px;
+            gap: 8px;
+            width: 100%;
         }
 
         .btn {
             background: transparent;
-            border: 2px solid var(--primary-maroon);
+            border: 1.5px solid var(--primary-maroon);
             color: var(--primary-maroon);
-            padding: 9px 14px;
+            padding: 8px 10px;
             border-radius: 4px;
             font-weight: 600;
-            font-size: clamp(0.75rem, 2vw, 0.85rem);
+            font-size: 0.75rem;
             cursor: pointer;
             transition: var(--transition);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 5px;
             text-decoration: none;
-            flex: 1 1 auto;
+            flex: 1;
             text-align: center;
+            white-space: nowrap;
         }
 
         .btn:hover {
@@ -263,25 +276,23 @@
         }
 
         .btn svg {
-            width: 16px;
-            height: 16px;
+            width: 14px;
+            height: 14px;
             fill: currentColor;
             flex-shrink: 0;
         }
 
         .search-box {
-            position: relative;
-            flex: 1 1 250px;
             width: 100%;
         }
 
         .search-box input {
             width: 100%;
-            padding: 10px 14px;
+            padding: 8px 12px;
             border: 1px solid var(--border-color);
             border-radius: 4px;
             font-family: inherit;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             outline: none;
             transition: var(--transition);
             background-color: #FAF9F6;
@@ -290,14 +301,36 @@
         .search-box input:focus {
             border-color: var(--accent-gold);
             background-color: var(--white);
-            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
+            box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.2);
+        }
+
+        /* Desktop Controls Adjustment */
+        @media (min-width: 640px) {
+            .controls {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 18px;
+            }
+            .calendar-export {
+                width: auto;
+                flex: 0 0 auto;
+            }
+            .search-box {
+                flex: 1;
+                max-width: 280px;
+            }
+            .btn {
+                padding: 9px 14px;
+                font-size: 0.8rem;
+            }
         }
 
         /* Schedule Grid Layout */
         .schedule-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr));
-            gap: 20px;
+            gap: 15px;
             width: 100%;
         }
 
@@ -314,40 +347,39 @@
         }
 
         .game-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         .card-header {
             background-color: var(--primary-maroon);
             color: var(--white);
-            padding: 12px 16px;
+            padding: 10px 14px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
+            gap: 8px;
         }
 
         .date-badge {
             font-weight: 700;
-            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
-            letter-spacing: 0.5px;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
         }
 
         .time-badge {
             background: var(--accent-gold);
             color: var(--dark-maroon);
-            padding: 3px 8px;
+            padding: 2px 6px;
             border-radius: 3px;
-            font-size: 0.72rem;
+            font-size: 0.7rem;
             font-weight: 700;
             text-transform: uppercase;
             white-space: nowrap;
         }
 
         .card-body {
-            padding: 18px 16px;
+            padding: 15px 14px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -355,23 +387,23 @@
 
         .event-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(1.25rem, 4vw, 1.45rem);
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--primary-maroon);
-            margin-bottom: 12px;
-            line-height: 1.25;
+            margin-bottom: 10px;
+            line-height: 1.2;
         }
 
         .info-row {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 10px;
-            font-size: clamp(0.82rem, 2.5vw, 0.9rem);
+            margin-bottom: 8px;
+            font-size: 0.85rem;
         }
 
         .info-row svg {
-            width: 16px;
-            height: 16px;
+            width: 15px;
+            height: 15px;
             fill: var(--accent-gold);
             margin-right: 8px;
             flex-shrink: 0;
@@ -393,23 +425,22 @@
         /* Snack Section inside Cards */
         .snack-section {
             margin-top: auto;
-            padding-top: 12px;
+            padding-top: 10px;
             border-top: 1px dashed var(--border-color);
         }
 
         .snack-form-group {
             display: flex;
-            gap: 8px;
-            margin-top: 8px;
-            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 6px;
         }
 
         .snack-input {
-            flex: 1 1 160px;
-            padding: 8px 12px;
+            flex: 1;
+            padding: 6px 10px;
             border: 1px solid var(--border-color);
             border-radius: 4px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-family: inherit;
         }
 
@@ -423,29 +454,29 @@
             border-radius: 8px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border-color);
-            padding: 15px 20px;
-            margin-bottom: 20px;
+            padding: 12px 15px;
+            margin-bottom: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
         }
 
         .snack-status-text {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
         }
 
         .snack-sync-notice {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
             color: var(--primary-maroon);
         }
 
         .card-footer {
             border-top: 1px solid var(--border-color);
-            padding: 12px 16px;
+            padding: 10px 14px;
             background-color: #FAFAFA;
             display: flex;
             justify-content: flex-end;
@@ -454,10 +485,10 @@
         .map-btn {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
             color: var(--primary-maroon);
             text-decoration: none;
-            font-size: 0.82rem;
+            font-size: 0.8rem;
             font-weight: 600;
             transition: var(--transition);
         }
@@ -467,51 +498,25 @@
         }
 
         .map-btn svg {
-            width: 15px;
-            height: 15px;
+            width: 14px;
+            height: 14px;
             fill: currentColor;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 30px 15px;
+            padding: 25px 15px;
             background: var(--dark-maroon);
             color: var(--light-gold);
-            margin-top: 50px;
-            font-size: clamp(0.75rem, 2vw, 0.85rem);
+            margin-top: 40px;
+            font-size: 0.8rem;
             border-top: 3px solid var(--accent-gold);
             width: 100%;
         }
 
         footer p {
-            margin-bottom: 6px;
-        }
-
-        /* Small screen specific overrides */
-        @media (max-width: 480px) {
-            .controls {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .calendar-export {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .card-header {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-
-            .tab-btn {
-                padding: 12px 15px;
-            }
+            margin-bottom: 4px;
         }
     </style>
 </head>
@@ -545,7 +550,7 @@
             <svg class="crest-icon" viewBox="0 0 24 24">
                 <path d="M12,2C10.5,4 8,7.5 8,11C8,13 9,14.5 10.5,15.5C9,15.5 6,15 4,12C3,15 4,18 7,19C9,19.7 11,19 11.5,18.5C11.2,20 10.5,21.5 9,22H15C13.5,21.5 12.8,20 12.5,18.5C13,19 15,19.7 17,19C20,18 21,15 20,12C18,15 15,15.5 13.5,15.5C15,14.5 16,13 16,11C16,7.5 13.5,4 12,2Z"/>
             </svg>
-            <h1>2nd Grade Girls Soccer Schedule</h1>
+            <h1><span class="num-two">2</span><sup>nd</sup> Grade Villa Girls Soccer Schedule</h1>
             <p>Fall 2026 Athletics Season</p>
         </div>
     </header>
@@ -560,21 +565,19 @@
 
         <!-- TAB 1: GAME SCHEDULE -->
         <div id="games" class="tab-content active">
-            <!-- Controls Section -->
+            <!-- Compact Controls Section -->
             <div class="controls">
-                <!-- Calendar Export Options -->
                 <div class="calendar-export">
                     <button class="btn btn-gold" onclick="downloadICS()">
                         <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
-                        Download iCal (.ics)
+                        iCal (.ics)
                     </button>
                     <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=2nd+Grade+Girls+Soccer+Season&details=Soccer+Schedule+for+2nd+Grade+Girls" target="_blank" class="btn">
                         <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
-                        Google Calendar
+                        Google Cal
                     </a>
                 </div>
 
-                <!-- Search Field -->
                 <div class="search-box">
                     <input type="text" id="searchInput" onkeyup="searchSchedule()" placeholder="Search location or team...">
                 </div>
@@ -589,7 +592,7 @@
         <!-- TAB 2: PRACTICES -->
         <div id="practices" class="tab-content">
             <div class="snack-status-bar">
-                <span class="snack-status-text">Practices are held every Tuesday from 3:00 - 4:15 PM CDT. Sign up to bring team snacks below.</span>
+                <span class="snack-status-text">Practices are held Tuesdays from 3:00 - 4:15 PM CDT. Sign up for snacks below.</span>
                 <span id="snackSyncNotice" class="snack-sync-notice"></span>
             </div>
 
@@ -631,8 +634,11 @@
             { id: "p9", date: "Tuesday, Oct 20, 2026", time: "3:00 - 4:15 PM CDT" }
         ];
 
-        // Public Storage Bin ID for shared multi-device sign-ups
-        const BIN_ID = "villa_soccer_snacks_2026";
+        // JSONBin.io Credentials
+        const BIN_ID = "6a8dc61bf5f4af5e2940fbbf";
+        const API_KEY = "$2a$10$3XT2O7GyzmJ6R0zKT4UB2OrLtJWkwivcmmrxkWYQNZzLKKn7EFTR2";
+        const JSONBIN_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
+
         let snackData = {};
 
         function switchTab(tabId, btn) {
@@ -657,22 +663,26 @@
         }
 
         async function loadSnackData() {
-            const local = localStorage.getItem(BIN_ID);
+            const local = localStorage.getItem("villa_soccer_snacks");
             if (local) {
-                snackData = JSON.parse(local);
+                try { snackData = JSON.parse(local); } catch(e){}
             }
 
             try {
-                const res = await fetch(`https://api.keyvalue.xyz/3b33a598/${BIN_ID}`);
+                const res = await fetch(`${JSONBIN_URL}/latest`, {
+                    headers: {
+                        "X-Master-Key": API_KEY
+                    }
+                });
                 if (res.ok) {
-                    const remoteData = await res.json();
-                    if (remoteData) {
-                        snackData = remoteData;
-                        localStorage.setItem(BIN_ID, JSON.stringify(snackData));
+                    const result = await res.json();
+                    if (result.record) {
+                        snackData = result.record;
+                        localStorage.setItem("villa_soccer_snacks", JSON.stringify(snackData));
                     }
                 }
             } catch (e) {
-                console.log("Using local storage fallback.");
+                console.log("Using local cache fallback.");
             }
 
             renderGames();
@@ -714,7 +724,7 @@
                                 <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h2v5l-1-.75L9 9V4zm9 16H6V4h1v9l3-2.25L13 13V4h5v16z"/></svg>
                                 <div>
                                     <span class="info-label">Snacks:</span>
-                                    <span class="info-value">${signedUp ? `<strong>${signedUp}</strong>` : '<em>Not yet claimed</em>'}</span>
+                                    <span class="info-value">${signedUp ? `<strong>${signedUp}</strong>` : '<em>Not claimed</em>'}</span>
                                 </div>
                             </div>
                             <div class="snack-form-group">
@@ -762,7 +772,7 @@
                                 <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h2v5l-1-.75L9 9V4zm9 16H6V4h1v9l3-2.25L13 13V4h5v16z"/></svg>
                                 <div>
                                     <span class="info-label">Snacks:</span>
-                                    <span class="info-value">${signedUp ? `<strong>${signedUp}</strong>` : '<em>Not yet claimed</em>'}</span>
+                                    <span class="info-value">${signedUp ? `<strong>${signedUp}</strong>` : '<em>Not claimed</em>'}</span>
                                 </div>
                             </div>
                             <div class="snack-form-group">
@@ -781,20 +791,29 @@
             if (!inputElem) return;
             const val = inputElem.value.trim();
             snackData[id] = val;
-            
-            localStorage.setItem(BIN_ID, JSON.stringify(snackData));
+
+            localStorage.setItem("villa_soccer_snacks", JSON.stringify(snackData));
             renderGames();
             renderPractices();
 
             const status = document.getElementById('snackSyncNotice');
-            if (status) status.innerText = "Saving sign-up to team schedule...";
+            if (status) status.innerText = "Syncing update...";
 
             try {
-                await fetch(`https://api.keyvalue.xyz/3b33a598/${BIN_ID}`, {
-                    method: 'POST',
+                const res = await fetch(JSONBIN_URL, {
+                    method: 'PUT',
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-Master-Key": API_KEY
+                    },
                     body: JSON.stringify(snackData)
                 });
-                if (status) status.innerText = "✓ Sign-up saved for everyone!";
+
+                if (res.ok) {
+                    if (status) status.innerText = "✓ Saved for everyone!";
+                } else {
+                    if (status) status.innerText = "✓ Saved locally!";
+                }
             } catch (e) {
                 if (status) status.innerText = "✓ Saved locally!";
             }
