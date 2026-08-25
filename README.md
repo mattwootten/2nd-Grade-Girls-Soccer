@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>2nd Grade Girls Soccer Schedule | Villa Duchesne Theme</title>
     <!-- Google Fonts for typography inspired by Villa Duchesne -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,20 +28,29 @@
             padding: 0;
         }
 
+        html, body {
+            width: 100%;
+            overflow-x: hidden; /* Prevents unwanted horizontal scrolling on mobile */
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: var(--bg-cream);
             color: var(--text-dark);
-            line-height: 1.6;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         /* Top Bar: Coach Contact Info */
         .coach-bar {
             background-color: var(--dark-maroon);
             color: var(--light-gold);
-            padding: 10px 20px;
-            font-size: 0.85rem;
+            padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px);
+            font-size: clamp(0.75rem, 2.2vw, 0.85rem);
             border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+            width: 100%;
         }
 
         .coach-container {
@@ -50,7 +59,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: clamp(8px, 2vw, 20px);
             flex-wrap: wrap;
             text-align: center;
         }
@@ -58,7 +67,7 @@
         .coach-title {
             font-weight: 700;
             color: var(--accent-gold);
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             text-transform: uppercase;
         }
 
@@ -69,6 +78,7 @@
             color: var(--light-gold);
             text-decoration: none;
             transition: var(--transition);
+            padding: 2px 0;
         }
 
         .coach-item:hover {
@@ -89,36 +99,40 @@
                         url('https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
             color: var(--white);
             text-align: center;
-            padding: 60px 20px;
+            padding: clamp(35px, 6vw, 65px) clamp(15px, 4vw, 30px);
             position: relative;
             border-bottom: 5px solid var(--accent-gold);
+            width: 100%;
         }
 
         .header-content {
             max-width: 900px;
             margin: 0 auto;
+            width: 100%;
         }
 
         .crest-icon {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 12px;
+            width: clamp(38px, 8vw, 52px);
+            height: clamp(38px, 8vw, 52px);
+            margin-bottom: 10px;
             fill: var(--accent-gold);
         }
 
         header h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2.8rem;
+            font-size: clamp(1.6rem, 5.5vw, 2.8rem);
             font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
             text-transform: uppercase;
+            line-height: 1.2;
+            word-wrap: break-word;
         }
 
         header p {
-            font-size: 1.1rem;
+            font-size: clamp(0.85rem, 2.5vw, 1.1rem);
             color: var(--light-gold);
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             font-weight: 500;
         }
@@ -126,8 +140,10 @@
         /* Main Container */
         .container {
             max-width: 1100px;
-            margin: 30px auto;
-            padding: 0 20px;
+            width: 100%;
+            margin: clamp(20px, 4vw, 35px) auto;
+            padding: 0 clamp(12px, 3vw, 20px);
+            flex-grow: 1;
         }
 
         /* Action & Search Bar */
@@ -136,30 +152,32 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 25px;
+            gap: 12px;
+            margin-bottom: clamp(20px, 4vw, 30px);
             background: var(--white);
-            padding: 18px 20px;
+            padding: clamp(12px, 3vw, 18px) clamp(15px, 3vw, 20px);
             border-radius: 8px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border-color);
+            width: 100%;
         }
 
         .calendar-export {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
-            width: auto;
+            width: 100%;
+            max-width: 100%;
         }
 
         .btn {
             background: transparent;
             border: 2px solid var(--primary-maroon);
             color: var(--primary-maroon);
-            padding: 9px 16px;
+            padding: clamp(8px, 2vw, 10px) clamp(12px, 2.5vw, 16px);
             border-radius: 4px;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: clamp(0.78rem, 2vw, 0.85rem);
             cursor: pointer;
             transition: var(--transition);
             text-transform: uppercase;
@@ -170,6 +188,8 @@
             gap: 8px;
             text-decoration: none;
             white-space: nowrap;
+            flex: 1 1 auto;
+            min-height: 42px; /* Touch target optimization */
         }
 
         .btn:hover, .btn.active {
@@ -193,23 +213,25 @@
             width: 16px;
             height: 16px;
             fill: currentColor;
+            flex-shrink: 0;
         }
 
         .search-box {
             position: relative;
+            width: 100%;
             flex-grow: 1;
-            max-width: 320px;
         }
 
         .search-box input {
             width: 100%;
-            padding: 10px 15px;
+            padding: clamp(9px, 2vw, 11px) 14px;
             border: 1px solid var(--border-color);
             border-radius: 4px;
             font-family: inherit;
-            font-size: 0.9rem;
+            font-size: clamp(0.85rem, 2vw, 0.9rem);
             outline: none;
             transition: var(--transition);
+            min-height: 42px;
         }
 
         .search-box input:focus {
@@ -217,11 +239,12 @@
             box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
         }
 
-        /* Schedule Grid Layout */
+        /* Schedule Grid Layout - Fluid dynamic scaling */
         .schedule-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(clamp(270px, 45vw, 320px), 1fr));
+            gap: clamp(15px, 3vw, 25px);
+            width: 100%;
         }
 
         .game-card {
@@ -233,40 +256,44 @@
             transition: var(--transition);
             display: flex;
             flex-direction: column;
+            width: 100%;
         }
 
         .game-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
         }
 
         .card-header {
             background-color: var(--primary-maroon);
             color: var(--white);
-            padding: 15px 20px;
+            padding: clamp(12px, 2.5vw, 15px) clamp(14px, 3vw, 20px);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
         }
 
         .date-badge {
             font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
+            font-size: clamp(0.82rem, 2.2vw, 0.9rem);
+            letter-spacing: 0.3px;
         }
 
         .time-badge {
             background: var(--accent-gold);
             color: var(--dark-maroon);
-            padding: 4px 10px;
+            padding: 3px 8px;
             border-radius: 3px;
-            font-size: 0.75rem;
+            font-size: clamp(0.7rem, 1.8vw, 0.75rem);
             font-weight: 700;
             text-transform: uppercase;
+            white-space: nowrap;
         }
 
         .card-body {
-            padding: 22px 20px;
+            padding: clamp(16px, 3vw, 22px) clamp(14px, 3vw, 20px);
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -274,43 +301,46 @@
 
         .event-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.45rem;
+            font-size: clamp(1.25rem, 3.5vw, 1.45rem);
             font-weight: 700;
             color: var(--primary-maroon);
-            margin-bottom: 15px;
-            line-height: 1.3;
+            margin-bottom: 12px;
+            line-height: 1.25;
+            overflow-wrap: break-word;
         }
 
         .info-row {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 12px;
-            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-size: clamp(0.82rem, 2.2vw, 0.9rem);
         }
 
         .info-row svg {
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
             fill: var(--accent-gold);
-            margin-right: 10px;
+            margin-right: 8px;
             flex-shrink: 0;
-            margin-top: 2px;
+            margin-top: 3px;
         }
 
         .info-label {
             font-weight: 600;
             color: var(--text-dark);
-            margin-right: 5px;
+            margin-right: 4px;
+            flex-shrink: 0;
         }
 
         .info-value {
             color: var(--text-muted);
             word-break: break-word;
+            overflow-wrap: anywhere;
         }
 
         .card-footer {
             border-top: 1px solid var(--border-color);
-            padding: 14px 20px;
+            padding: clamp(10px, 2vw, 14px) clamp(14px, 3vw, 20px);
             background-color: #FAFAFA;
             display: flex;
             justify-content: flex-end;
@@ -322,9 +352,10 @@
             gap: 6px;
             color: var(--primary-maroon);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: clamp(0.8rem, 2vw, 0.85rem);
             font-weight: 600;
             transition: var(--transition);
+            padding: 4px 0;
         }
 
         .map-btn:hover {
@@ -332,67 +363,58 @@
         }
 
         .map-btn svg {
-            width: 16px;
-            height: 16px;
+            width: 15px;
+            height: 15px;
             fill: currentColor;
+            flex-shrink: 0;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 40px 20px;
+            padding: clamp(25px, 5vw, 40px) clamp(15px, 3vw, 20px);
             background: var(--dark-maroon);
             color: var(--light-gold);
-            margin-top: 60px;
-            font-size: 0.85rem;
+            margin-top: clamp(35px, 6vw, 60px);
+            font-size: clamp(0.78rem, 2vw, 0.85rem);
             border-top: 3px solid var(--accent-gold);
+            width: 100%;
         }
 
         footer p {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
-        /* Mobile Optimization */
-        @media (max-width: 768px) {
-            header {
-                padding: 45px 15px;
+        /* Desktop Layout Adjustments */
+        @media (min-width: 641px) {
+            .calendar-export {
+                width: auto;
             }
-
-            header h1 {
-                font-size: 2rem;
+            .search-box {
+                width: auto;
+                max-width: 280px;
             }
-
-            header p {
-                font-size: 0.95rem;
+            .btn {
+                flex: initial;
             }
+        }
 
-            .coach-container {
-                flex-direction: column;
-                gap: 6px;
-            }
-
+        /* Mobile Layout Tweaks */
+        @media (max-width: 640px) {
             .controls {
                 flex-direction: column;
                 align-items: stretch;
-                padding: 15px;
             }
-
             .calendar-export {
                 flex-direction: column;
-                width: 100%;
             }
-
-            .calendar-export .btn {
-                width: 100%;
+            .coach-container {
+                flex-direction: column;
+                gap: 4px;
             }
-
-            .search-box {
-                max-width: 100%;
-                width: 100%;
-            }
-
-            .schedule-grid {
-                grid-template-columns: 1fr;
+            .card-header {
+                flex-direction: row;
+                align-items: center;
             }
         }
     </style>
