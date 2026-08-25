@@ -110,8 +110,8 @@
 
         /* Header / Hero Section */
         header {
-            background: linear-gradient(135deg, rgba(74, 18, 31, 0.85) 0%, rgba(107, 29, 47, 0.8) 100%),
-                        url('https://raw.githubusercontent.com/mattwootten/2nd-Grade-Girls-Soccer/036c388602c06d3bbb288b831137f7dd536430d3/hero-banner.jpg') center 35%/cover no-repeat;
+            background: linear-gradient(135deg, rgba(74, 18, 31, 0.88) 0%, rgba(107, 29, 47, 0.82) 100%),
+                        url('https://raw.githubusercontent.com/mattwootten/2nd-Grade-Girls-Soccer/3735de8155cb5040f6f877bb48b12043d6e4f09f/hero-banner.jpeg') center 35%/cover no-repeat;
             color: var(--white);
             text-align: center;
             padding: clamp(25px, 5vw, 45px) 15px;
