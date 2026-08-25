@@ -108,13 +108,13 @@
             flex-shrink: 0;
         }
 
-        /* Header / Hero Section Updated with Local Image Reference */
+        /* Header / Hero Section */
         header {
-            background: linear-gradient(135deg, rgba(74, 18, 31, 0.85) 0%, rgba(107, 29, 47, 0.78) 100%),
-                        url('hero-banner.jpg') center 40%/cover no-repeat;
+            background: linear-gradient(135deg, rgba(74, 18, 31, 0.85) 0%, rgba(107, 29, 47, 0.8) 100%),
+                        url('https://raw.githubusercontent.com/mattwootten/2nd-Grade-Girls-Soccer/036c388602c06d3bbb288b831137f7dd536430d3/hero-banner.jpg') center 35%/cover no-repeat;
             color: var(--white);
             text-align: center;
-            padding: clamp(35px, 6vw, 60px) 15px;
+            padding: clamp(25px, 5vw, 45px) 15px;
             position: relative;
             border-bottom: 5px solid var(--accent-gold);
             width: 100%;
