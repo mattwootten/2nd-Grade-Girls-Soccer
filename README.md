@@ -631,8 +631,11 @@
             { id: "p9", date: "Tuesday, Oct 20, 2026", time: "3:00 - 4:15 PM CDT" }
         ];
 
-        // Public Storage Bin ID for shared multi-device sign-ups
-        const BIN_ID = "villa_soccer_snacks_2026";
+        // JSONBin.io Credentials
+        const BIN_ID = "6a8dc61bf5f4af5e2940fbbf";
+        const API_KEY = "$2a$10$3XT2O7GyzmJ6R0zKT4UB2OrLtJWkwivcmmrxkWYQNZzLKKn7EFTR2";
+        const JSONBIN_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
+
         let snackData = {};
 
         function switchTab(tabId, btn) {
@@ -657,22 +660,28 @@
         }
 
         async function loadSnackData() {
-            const local = localStorage.getItem(BIN_ID);
+            // Load local cache first for instant feedback
+            const local = localStorage.getItem("villa_soccer_snacks");
             if (local) {
-                snackData = JSON.parse(local);
+                try { snackData = JSON.parse(local); } catch(e){}
             }
 
+            // Fetch latest records from JSONBin
             try {
-                const res = await fetch(`https://api.keyvalue.xyz/3b33a598/${BIN_ID}`);
+                const res = await fetch(`${JSONBIN_URL}/latest`, {
+                    headers: {
+                        "X-Master-Key": API_KEY
+                    }
+                });
                 if (res.ok) {
-                    const remoteData = await res.json();
-                    if (remoteData) {
-                        snackData = remoteData;
-                        localStorage.setItem(BIN_ID, JSON.stringify(snackData));
+                    const result = await res.json();
+                    if (result.record) {
+                        snackData = result.record;
+                        localStorage.setItem("villa_soccer_snacks", JSON.stringify(snackData));
                     }
                 }
             } catch (e) {
-                console.log("Using local storage fallback.");
+                console.log("Using local cache fallback.");
             }
 
             renderGames();
@@ -781,25 +790,36 @@
             if (!inputElem) return;
             const val = inputElem.value.trim();
             snackData[id] = val;
-            
-            localStorage.setItem(BIN_ID, JSON.stringify(snackData));
+
+            // Cache locally immediately
+            localStorage.setItem("villa_soccer_snacks", JSON.stringify(snackData));
             renderGames();
             renderPractices();
 
             const status = document.getElementById('snackSyncNotice');
-            if (status) status.innerText = "Saving sign-up to team schedule...";
+            if (status) status.innerText = "Syncing with live team schedule...";
 
+            // Push updated object to JSONBin bin
             try {
-                await fetch(`https://api.keyvalue.xyz/3b33a598/${BIN_ID}`, {
-                    method: 'POST',
+                const res = await fetch(JSONBIN_URL, {
+                    method: 'PUT',
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-Master-Key": API_KEY
+                    },
                     body: JSON.stringify(snackData)
                 });
-                if (status) status.innerText = "✓ Sign-up saved for everyone!";
+
+                if (res.ok) {
+                    if (status) status.innerText = "✓ Saved! Everyone can see this update.";
+                } else {
+                    if (status) status.innerText = "✓ Saved locally!";
+                }
             } catch (e) {
                 if (status) status.innerText = "✓ Saved locally!";
             }
 
-            setTimeout(() => { if (status) status.innerText = ""; }, 3000);
+            setTimeout(() => { if (status) status.innerText = ""; }, 4000);
         }
 
         function downloadICS() {
