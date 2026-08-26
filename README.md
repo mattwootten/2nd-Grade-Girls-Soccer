@@ -32,7 +32,7 @@
             font-family: 'Montserrat', sans-serif;
             background-color: var(--bg-cream);
             color: var(--text-dark);
-            line-height: 1.5;
+            line-height: 1.4;
             width: 100%;
             overflow-x: hidden;
         }
@@ -41,8 +41,8 @@
         .coach-bar {
             background-color: var(--dark-maroon);
             color: var(--light-gold);
-            padding: 10px 15px;
-            font-size: clamp(0.75rem, 2.5vw, 0.85rem);
+            padding: 6px 12px;
+            font-size: clamp(0.72rem, 2.2vw, 0.82rem);
             border-bottom: 1px solid rgba(197, 160, 89, 0.3);
             width: 100%;
         }
@@ -54,7 +54,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 4px;
+            gap: 2px;
             text-align: center;
         }
 
@@ -62,13 +62,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px 20px;
+            gap: 8px 14px;
             flex-wrap: wrap;
         }
 
         .coach-assistant-row {
             color: var(--light-gold);
-            font-size: clamp(0.72rem, 2.2vw, 0.82rem);
+            font-size: clamp(0.68rem, 2vw, 0.78rem);
             opacity: 0.95;
         }
 
@@ -79,18 +79,23 @@
             text-transform: uppercase;
         }
 
+        .coach-name {
+            color: var(--light-gold);
+            font-weight: 400;
+        }
+
         .coach-details {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
             flex-wrap: wrap;
         }
 
         .coach-item {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
             color: var(--light-gold);
             text-decoration: none;
             transition: var(--transition);
@@ -102,21 +107,21 @@
         }
 
         .coach-item svg {
-            width: 14px;
-            height: 14px;
+            width: 12px;
+            height: 12px;
             fill: var(--accent-gold);
             flex-shrink: 0;
         }
 
         /* Header / Hero Section */
         header {
-            background: linear-gradient(135deg, rgba(74, 18, 31, 0.85) 0%, rgba(107, 29, 47, 0.8) 100%),
-                        url('https://raw.githubusercontent.com/mattwootten/2nd-Grade-Girls-Soccer/036c388602c06d3bbb288b831137f7dd536430d3/hero-banner.jpg') center 35%/cover no-repeat;
+            background: linear-gradient(135deg, rgba(74, 18, 31, 0.88) 0%, rgba(107, 29, 47, 0.82) 100%),
+                        url('https://raw.githubusercontent.com/mattwootten/2nd-Grade-Girls-Soccer/3735de8155cb5040f6f877bb48b12043d6e4f09f/hero-banner.jpeg') center 35%/cover no-repeat;
             color: var(--white);
             text-align: center;
-            padding: clamp(25px, 5vw, 45px) 15px;
+            padding: clamp(14px, 3.5vw, 24px) 12px;
             position: relative;
-            border-bottom: 5px solid var(--accent-gold);
+            border-bottom: 4px solid var(--accent-gold);
             width: 100%;
         }
 
@@ -125,21 +130,21 @@
             margin: 0 auto;
         }
 
-        .crest-icon {
-            width: clamp(35px, 5vw, 45px);
-            height: clamp(35px, 5vw, 45px);
-            margin-bottom: 8px;
-            fill: var(--accent-gold);
+        .villa-logo {
+            max-width: clamp(140px, 30vw, 210px);
+            height: auto;
+            margin-bottom: 6px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
         }
 
         header h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(1.5rem, 4.5vw, 2.4rem);
+            font-size: clamp(1.35rem, 3.8vw, 2.1rem);
             font-weight: 700;
             letter-spacing: 0.5px;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
             text-transform: uppercase;
-            line-height: 1.2;
+            line-height: 1.15;
             font-variant-numeric: lining-nums;
         }
 
@@ -155,11 +160,12 @@
         }
 
         header p {
-            font-size: clamp(0.8rem, 2vw, 1rem);
+            font-size: clamp(0.72rem, 1.8vw, 0.9rem);
             color: var(--light-gold);
-            letter-spacing: 1.5px;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
             font-weight: 500;
+            margin-top: 2px;
         }
 
         /* Tab Navigation Bar */
@@ -172,12 +178,12 @@
         }
 
         .tab-btn {
-            padding: 12px 20px;
+            padding: 10px 16px;
             background: transparent;
             color: var(--light-gold);
             border: none;
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(0.75rem, 2.2vw, 0.9rem);
+            font-size: clamp(0.72rem, 2vw, 0.85rem);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -203,7 +209,7 @@
         /* Main Container */
         .container {
             max-width: 1100px;
-            margin: 15px auto 30px;
+            margin: 12px auto 25px;
             padding: 0 12px;
             width: 100%;
         }
@@ -216,31 +222,26 @@
             display: block;
         }
 
-        /* Compact Controls Bar */
+        /* Controls Bar with Instructions */
         .controls {
             display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 18px;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
             background: var(--white);
-            padding: 12px;
+            padding: 10px 14px;
             border-radius: 8px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border-color);
             width: 100%;
-        }
-
-        .calendar-export {
-            display: flex;
-            gap: 8px;
-            width: 100%;
+            flex-wrap: wrap;
         }
 
         .btn {
             background: transparent;
             border: 1.5px solid var(--primary-maroon);
             color: var(--primary-maroon);
-            padding: 8px 10px;
+            padding: 8px 12px;
             border-radius: 4px;
             font-weight: 600;
             font-size: 0.75rem;
@@ -251,11 +252,10 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 5px;
+            gap: 6px;
             text-decoration: none;
-            flex: 1;
-            text-align: center;
             white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .btn:hover {
@@ -282,48 +282,11 @@
             flex-shrink: 0;
         }
 
-        .search-box {
-            width: 100%;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 8px 12px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            font-family: inherit;
-            font-size: 0.85rem;
-            outline: none;
-            transition: var(--transition);
-            background-color: #FAF9F6;
-        }
-
-        .search-box input:focus {
-            border-color: var(--accent-gold);
-            background-color: var(--white);
-            box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.2);
-        }
-
-        /* Desktop Controls Adjustment */
-        @media (min-width: 640px) {
-            .controls {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                padding: 15px 18px;
-            }
-            .calendar-export {
-                width: auto;
-                flex: 0 0 auto;
-            }
-            .search-box {
-                flex: 1;
-                max-width: 280px;
-            }
-            .btn {
-                padding: 9px 14px;
-                font-size: 0.8rem;
-            }
+        .ical-instruction {
+            font-size: clamp(0.75rem, 2vw, 0.82rem);
+            color: var(--text-muted);
+            line-height: 1.3;
+            flex: 1 1 200px;
         }
 
         /* Schedule Grid Layout */
@@ -379,7 +342,7 @@
         }
 
         .card-body {
-            padding: 15px 14px;
+            padding: 14px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -387,25 +350,25 @@
 
         .event-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 700;
             color: var(--primary-maroon);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             line-height: 1.2;
         }
 
         .info-row {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 8px;
-            font-size: 0.85rem;
+            margin-bottom: 6px;
+            font-size: 0.82rem;
         }
 
         .info-row svg {
-            width: 15px;
-            height: 15px;
+            width: 14px;
+            height: 14px;
             fill: var(--accent-gold);
-            margin-right: 8px;
+            margin-right: 6px;
             flex-shrink: 0;
             margin-top: 2px;
         }
@@ -425,7 +388,7 @@
         /* Snack Section inside Cards */
         .snack-section {
             margin-top: auto;
-            padding-top: 10px;
+            padding-top: 8px;
             border-top: 1px dashed var(--border-color);
         }
 
@@ -437,10 +400,10 @@
 
         .snack-input {
             flex: 1;
-            padding: 6px 10px;
+            padding: 5px 8px;
             border: 1px solid var(--border-color);
             border-radius: 4px;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-family: inherit;
         }
 
@@ -454,29 +417,29 @@
             border-radius: 8px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border-color);
-            padding: 12px 15px;
-            margin-bottom: 15px;
+            padding: 10px 12px;
+            margin-bottom: 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
         }
 
         .snack-status-text {
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             color: var(--text-muted);
         }
 
         .snack-sync-notice {
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 600;
             color: var(--primary-maroon);
         }
 
         .card-footer {
             border-top: 1px solid var(--border-color);
-            padding: 10px 14px;
+            padding: 8px 14px;
             background-color: #FAFAFA;
             display: flex;
             justify-content: flex-end;
@@ -488,7 +451,7 @@
             gap: 4px;
             color: var(--primary-maroon);
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 600;
             transition: var(--transition);
         }
@@ -498,25 +461,31 @@
         }
 
         .map-btn svg {
-            width: 14px;
-            height: 14px;
+            width: 13px;
+            height: 13px;
             fill: currentColor;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 25px 15px;
+            padding: 20px 15px;
             background: var(--dark-maroon);
             color: var(--light-gold);
-            margin-top: 40px;
-            font-size: 0.8rem;
+            margin-top: 30px;
+            font-size: 0.78rem;
             border-top: 3px solid var(--accent-gold);
             width: 100%;
         }
 
         footer p {
             margin-bottom: 4px;
+        }
+
+        @media (max-width: 480px) {
+            .btn {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -526,7 +495,10 @@
     <div class="coach-bar">
         <div class="coach-container">
             <div class="coach-head-row">
-                <span class="coach-title">Coach: Matt Wootten</span>
+                <div>
+                    <span class="coach-title">Coach:</span>
+                    <span class="coach-name">Matt Wootten</span>
+                </div>
                 <div class="coach-details">
                     <a href="tel:6362840190" class="coach-item">
                         <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
@@ -547,9 +519,7 @@
     <!-- Hero Header -->
     <header>
         <div class="header-content">
-            <svg class="crest-icon" viewBox="0 0 24 24">
-                <path d="M12,2C10.5,4 8,7.5 8,11C8,13 9,14.5 10.5,15.5C9,15.5 6,15 4,12C3,15 4,18 7,19C9,19.7 11,19 11.5,18.5C11.2,20 10.5,21.5 9,22H15C13.5,21.5 12.8,20 12.5,18.5C13,19 15,19.7 17,19C20,18 21,15 20,12C18,15 15,15.5 13.5,15.5C15,14.5 16,13 16,11C16,7.5 13.5,4 12,2Z"/>
-            </svg>
+            <img class="villa-logo" src="https://resources.finalsite.net/images/f_auto,q_auto/v1658736895/vdoh/s8isqiliyh9ktoymnanr/Logo_Horizontal.png" alt="Villa Duchesne Logo">
             <h1><span class="num-two">2</span><sup>nd</sup> Grade Villa Girls Soccer Schedule</h1>
             <p>Fall 2026 Athletics Season</p>
         </div>
@@ -565,21 +535,14 @@
 
         <!-- TAB 1: GAME SCHEDULE -->
         <div id="games" class="tab-content active">
-            <!-- Compact Controls Section -->
+            <!-- Controls Section -->
             <div class="controls">
-                <div class="calendar-export">
-                    <button class="btn btn-gold" onclick="downloadICS()">
-                        <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
-                        iCal (.ics)
-                    </button>
-                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=2nd+Grade+Girls+Soccer+Season&details=Soccer+Schedule+for+2nd+Grade+Girls" target="_blank" class="btn">
-                        <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
-                        Google Cal
-                    </a>
-                </div>
-
-                <div class="search-box">
-                    <input type="text" id="searchInput" onkeyup="searchSchedule()" placeholder="Search location or team...">
+                <button class="btn btn-gold" onclick="downloadICS()">
+                    <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
+                    Download iCal (.ics)
+                </button>
+                <div class="ical-instruction">
+                    Clicking this will download the full game schedule to automatically add all games directly into your Apple, Google, or Outlook calendar app.
                 </div>
             </div>
 
@@ -604,7 +567,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 2nd Grade Girls Soccer • Villa Duchesne Spirit</p>
+        <p>&copy; 2026 2nd Grade Girls Soccer • Villa Duchesne</p>
         <p>Designed with faith, community, and excellence.</p>
     </footer>
 
@@ -646,20 +609,6 @@
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
             btn.classList.add('active');
-        }
-
-        function searchSchedule() {
-            const input = document.getElementById('searchInput').value.toLowerCase();
-            const cards = document.querySelectorAll('#gameGrid .game-card');
-
-            cards.forEach(card => {
-                const text = card.innerText.toLowerCase();
-                if (text.includes(input)) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
         }
 
         async function loadSnackData() {
