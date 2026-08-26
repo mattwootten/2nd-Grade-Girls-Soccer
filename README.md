@@ -394,22 +394,33 @@
 
         .snack-form-group {
             display: flex;
-            gap: 6px;
+            align-items: center;
+            gap: 8px;
             margin-top: 6px;
+            width: 100%;
         }
 
         .snack-input {
-            flex: 1;
-            padding: 5px 8px;
+            flex: 1 1 auto;
+            min-width: 0; /* Allows input to shrink on small screens without pushing button out */
+            padding: 7px 10px;
             border: 1px solid var(--border-color);
             border-radius: 4px;
-            font-size: 0.78rem;
+            font-size: 0.82rem;
             font-family: inherit;
         }
 
         .snack-input:focus {
             border-color: var(--accent-gold);
             outline: none;
+        }
+
+        .snack-form-group .btn {
+            flex: 0 0 auto;
+            min-width: 65px; /* Ensures text is always clear and fully visible */
+            padding: 7px 12px;
+            font-size: 0.75rem;
+            white-space: nowrap;
         }
 
         .snack-status-bar {
@@ -483,7 +494,7 @@
         }
 
         @media (max-width: 480px) {
-            .btn {
+            .controls .btn {
                 width: 100%;
             }
         }
