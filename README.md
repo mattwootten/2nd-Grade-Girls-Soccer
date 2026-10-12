@@ -629,14 +629,14 @@
     </footer>
 
     <script>
-        // Games Dataset (with completed game results and updated 10/17 details)
+        // Games Dataset (with completed game results including 10/4 Win 6-3)
         const gameData = [
             { id: "g1", title: "St. Francis of Assisi School (A)", date: "Sun, Aug 30, 2026", time: "2:00 PM CDT", label: "Field", loc: "Wehner - Odenwald, Field #1", addr: "7600 Hazel Ave, St. Louis, MO 63119", map: "https://maps.google.com/?q=7600+Hazel+Ave,+St.+Louis,+MO+63119", result: { type: "loss", text: "Loss", score: "1 - 7" } },
             { id: "g2", title: "Mary Queen of Peace School (A)", date: "Sat, Sep 12, 2026", time: "1:00 PM CDT", label: "Field", loc: "Bussen Park, Field 1B", addr: "400 Magoffin Rd, St. Louis, MO 63129", map: "https://maps.google.com/?q=400+Magoffin+Rd,+St.+Louis,+MO+63129", result: { type: "win", text: "Win", score: "8 - 0" } },
             { id: "g3", title: "St. Gabriel School (A)", date: "Sat, Sep 19, 2026", time: "2:00 PM CDT", label: "Location", loc: "St. Justin the Martyr School", addr: "11910 Eddie & Park Rd, St. Louis, MO 63126", map: "https://maps.google.com/?q=11910+Eddie+%26+Park+Rd,+St.+Louis,+MO+63126", result: { type: "loss", text: "Loss", score: "1 - 2" } },
             { id: "g4", title: "St. Margaret Mary Alacoque School (A)", date: "Sun, Sep 20, 2026", time: "1:00 PM CDT", label: "Location", loc: "St. Margaret Mary Alacoque School", addr: "4900 Ringer Rd, St. Louis, MO 63129", map: "https://maps.google.com/?q=4900+Ringer+Rd,+St.+Louis,+MO+63129", result: { type: "tie", text: "Tie", score: "1 - 1" } },
             { id: "g5", title: "Christ the King Catholic School (A)", date: "Sun, Sep 27, 2026", time: "1:00 PM CDT", label: "Location", loc: "Visitation Academy of St Louis", addr: "3020 N Ballas Rd, St. Louis, MO 63131", map: "https://maps.google.com/?q=3020+N+Ballas+Rd,+St.+Louis,+MO+63131", result: { type: "win", text: "Win", score: "1 - 0" } },
-            { id: "g6", title: "Our Lady of the Pillar School (A)", date: "Sun, Oct 4, 2026", time: "4:00 PM CDT", label: "Location", loc: "Odenwald", addr: "7600 Hazel Ave, St. Louis, MO 63119", map: "https://maps.google.com/?q=7600+Hazel+Ave,+St.+Louis,+MO+63119" },
+            { id: "g6", title: "Our Lady of the Pillar School (A)", date: "Sun, Oct 4, 2026", time: "4:00 PM CDT", label: "Location", loc: "Odenwald", addr: "7600 Hazel Ave, St. Louis, MO 63119", map: "https://maps.google.com/?q=7600+Hazel+Ave,+St.+Louis,+MO+63119", result: { type: "win", text: "Win", score: "6 - 3" } },
             { id: "g7", title: "Mary Queen of Peace School (A)", date: "Sat, Oct 17, 2026", time: "11:00 AM CDT", label: "Field", loc: "Our Lady of Lourdes Fields #1", addr: "7225 Dale Ave, Richmond Heights, MO 63117", map: "https://maps.google.com/?q=7225+Dale+Ave,+Richmond+Heights,+MO+63117" },
             { id: "g8", title: "St. Gabriel School (A)", date: "Sun, Oct 25, 2026", time: "1:00 PM CDT", label: "Location", loc: "Holy Redeemer Catholic School", addr: "17 Joy Ave, Webster Groves, MO 63119", map: "https://maps.google.com/?q=17+Joy+Ave,+Webster+Groves,+MO+63119" }
         ];
