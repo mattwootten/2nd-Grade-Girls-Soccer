@@ -629,7 +629,7 @@
     </footer>
 
     <script>
-        // Games Dataset (with completed game results)
+        // Games Dataset (with completed game results and updated 10/17 details)
         const gameData = [
             { id: "g1", title: "St. Francis of Assisi School (A)", date: "Sun, Aug 30, 2026", time: "2:00 PM CDT", label: "Field", loc: "Wehner - Odenwald, Field #1", addr: "7600 Hazel Ave, St. Louis, MO 63119", map: "https://maps.google.com/?q=7600+Hazel+Ave,+St.+Louis,+MO+63119", result: { type: "loss", text: "Loss", score: "1 - 7" } },
             { id: "g2", title: "Mary Queen of Peace School (A)", date: "Sat, Sep 12, 2026", time: "1:00 PM CDT", label: "Field", loc: "Bussen Park, Field 1B", addr: "400 Magoffin Rd, St. Louis, MO 63129", map: "https://maps.google.com/?q=400+Magoffin+Rd,+St.+Louis,+MO+63129", result: { type: "win", text: "Win", score: "8 - 0" } },
@@ -637,7 +637,7 @@
             { id: "g4", title: "St. Margaret Mary Alacoque School (A)", date: "Sun, Sep 20, 2026", time: "1:00 PM CDT", label: "Location", loc: "St. Margaret Mary Alacoque School", addr: "4900 Ringer Rd, St. Louis, MO 63129", map: "https://maps.google.com/?q=4900+Ringer+Rd,+St.+Louis,+MO+63129", result: { type: "tie", text: "Tie", score: "1 - 1" } },
             { id: "g5", title: "Christ the King Catholic School (A)", date: "Sun, Sep 27, 2026", time: "1:00 PM CDT", label: "Location", loc: "Visitation Academy of St Louis", addr: "3020 N Ballas Rd, St. Louis, MO 63131", map: "https://maps.google.com/?q=3020+N+Ballas+Rd,+St.+Louis,+MO+63131", result: { type: "win", text: "Win", score: "1 - 0" } },
             { id: "g6", title: "Our Lady of the Pillar School (A)", date: "Sun, Oct 4, 2026", time: "4:00 PM CDT", label: "Location", loc: "Odenwald", addr: "7600 Hazel Ave, St. Louis, MO 63119", map: "https://maps.google.com/?q=7600+Hazel+Ave,+St.+Louis,+MO+63119" },
-            { id: "g7", title: "Mary Queen of Peace School (A)", date: "Sat, Oct 17, 2026", time: "3:00 PM CDT", label: "Field", loc: "Kirkwood Park, Upper Field A", addr: "574 W Adams Ave, Kirkwood, MO 63122", map: "https://maps.google.com/?q=574+W+Adams+Ave,+Kirkwood,+MO+63122" },
+            { id: "g7", title: "Mary Queen of Peace School (A)", date: "Sat, Oct 17, 2026", time: "11:00 AM CDT", label: "Field", loc: "Our Lady of Lourdes Fields #1", addr: "7225 Dale Ave, Richmond Heights, MO 63117", map: "https://maps.google.com/?q=7225+Dale+Ave,+Richmond+Heights,+MO+63117" },
             { id: "g8", title: "St. Gabriel School (A)", date: "Sun, Oct 25, 2026", time: "1:00 PM CDT", label: "Location", loc: "Holy Redeemer Catholic School", addr: "17 Joy Ave, Webster Groves, MO 63119", map: "https://maps.google.com/?q=17+Joy+Ave,+Webster+Groves,+MO+63119" }
         ];
 
@@ -885,10 +885,10 @@ DESCRIPTION:Location: Odenwald\\nCoach: Matt Wootten (636-284-0190)\\nAssistant 
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Soccer: MARY QUEEN OF PEACE SCHOOL (A)
-DTSTART:20261017T200000Z
-DTEND:20261017T210000Z
-LOCATION:574 W Adams Ave, Kirkwood, MO 63122
-DESCRIPTION:Field: Kirkwood Park, Upper Field A\\nCoach: Matt Wootten (636-284-0190)\\nAssistant Coaches: Justin Lierz & Eddie Ibarra
+DTSTART:20261017T160000Z
+DTEND:20261017T170000Z
+LOCATION:7225 Dale Ave, Richmond Heights, MO 63117
+DESCRIPTION:Field: Our Lady of Lourdes Fields #1\\nCoach: Matt Wootten (636-284-0190)\\nAssistant Coaches: Justin Lierz & Eddie Ibarra
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Soccer: ST GABRIEL SCHOOL (A)
